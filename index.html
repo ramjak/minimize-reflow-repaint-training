@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Minimize Reflow Repaint</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <br>
+  <button id="doEmpty">empty the table</button>
+  <br><br>
+  <div>Shuffle data and:</div>
+  <button id="re">recreate element one bye one</button>
+  <button id="hre">recreate elements at once</button>
+  <button id="rt">replace text</button>
+  <br>
+  <br>
+  <label for="do-fixed-layout"><input type="checkbox" id="do-fixed-layout" checked="true"> set table-layout value with fixed</label>
+  <p>Render Time: <span id="time"></span>ms</p>
+  <table id="table">
+    <thead>
+      <tr>
+        <td>No.</td>
+        <td>Name</td>
+        <td>Avatar</td>
+      </tr>
+    </thead>
+    <tbody id="data-table-body" />
+  </table>
+  <br><br>
+
+  <footer>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></footer>
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+<!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+<!--  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>-->
+<!--  <script src="js/plugins.js"></script>-->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
