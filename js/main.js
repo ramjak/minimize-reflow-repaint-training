@@ -8,59 +8,65 @@ function shuffle(arr) {
 
 function createElementOneByOne(rootElement, data) {
   rootElement.innerHTML = '';
-  for (let i = 0; i < data.length; i++) {
-    const newTr = document.createElement('tr');
+  for (let j = 0; j < 100; j++) {
+    for (let i = 0; i < data.length; i++) {
+      const newTr = document.createElement('tr');
 
-    const newNoTd = document.createElement('td');
-    newNoTd.innerText = data[i].No;
-    newTr.appendChild(newNoTd);
+      const newNoTd = document.createElement('td');
+      newNoTd.innerText = data[i].No;
+      newTr.appendChild(newNoTd);
 
-    const newNameTd = document.createElement('td');
-    newNameTd.innerText = data[i].Name;
-    newTr.appendChild(newNameTd);
+      const newNameTd = document.createElement('td');
+      newNameTd.innerText = data[i].Name;
+      newTr.appendChild(newNameTd);
 
-    const newAvatarTd = document.createElement('td');
-    const newAvatarImg = new Image(50, 50);
-    newAvatarImg.src = data[i].Avatar;
-    newAvatarTd.appendChild(newAvatarImg);
-    newTr.appendChild(newAvatarTd);
+      const newAvatarTd = document.createElement('td');
+      const newAvatarImg = new Image(50, 50);
+      newAvatarImg.src = data[i].Avatar;
+      newAvatarTd.appendChild(newAvatarImg);
+      newTr.appendChild(newAvatarTd);
 
-    rootElement.appendChild(newTr);
+      rootElement.appendChild(newTr);
+    }
   }
 }
 
 function createElementAllAtOnce(rootElement, data) {
   rootElement.innerHTML = '';
   const wrapperElement = document.createDocumentFragment();
-  for (let i = 0; i < data.length; i++) {
-    const newTr = document.createElement('tr');
+  for (let j = 0; j < 100; j++) {
+    for (let i = 0; i < data.length; i++) {
+      const newTr = document.createElement('tr');
 
-    const newNoTd = document.createElement('td');
-    newNoTd.innerText = data[i].No;
-    newTr.appendChild(newNoTd);
+      const newNoTd = document.createElement('td');
+      newNoTd.innerText = data[i].No;
+      newTr.appendChild(newNoTd);
 
-    const newNameTd = document.createElement('td');
-    newNameTd.innerText = data[i].Name;
-    newTr.appendChild(newNameTd);
+      const newNameTd = document.createElement('td');
+      newNameTd.innerText = data[i].Name;
+      newTr.appendChild(newNameTd);
 
-    const newAvatarTd = document.createElement('td');
-    const newAvatarImg = new Image(50, 50);
-    newAvatarImg.src = data[i].Avatar;
-    newAvatarTd.appendChild(newAvatarImg);
-    newTr.appendChild(newAvatarTd);
+      const newAvatarTd = document.createElement('td');
+      const newAvatarImg = new Image(50, 50);
+      newAvatarImg.src = data[i].Avatar;
+      newAvatarTd.appendChild(newAvatarImg);
+      newTr.appendChild(newAvatarTd);
 
-    wrapperElement.appendChild(newTr);
+      wrapperElement.appendChild(newTr);
+    }
   }
   rootElement.appendChild(wrapperElement);
 }
 
 function replaceText(rootElement, data, prevData) {
-  for (let i = 0; i < data.length; i++) {
-    if (data[i] !== prevData[i]) {
-      const children = rootElement.children[i].children;
-      children[0].innerText = data[i].No;
-      children[1].innerText = data[i].Name;
-      children[2].firstChild.src = data[i].Avatar;
+  for (let j = 0; j < 100; j++) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i] !== prevData[i]) {
+        const children = rootElement.children[j * 10 + i].children;
+        children[0].innerText = data[i].No;
+        children[1].innerText = data[i].Name;
+        children[2].firstChild.src = data[i].Avatar;
+      }
     }
   }
 }
